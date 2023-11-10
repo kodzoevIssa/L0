@@ -1,0 +1,119 @@
+.page {
+  display: flex;
+  justify-content: space-between;
+}
+.result {
+  margin-top: 24px;
+  margin-right: 24px;
+  width: 390px;
+  height: 524px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 16px 24px 24px 24px;
+}
+.result2 {
+  margin-top: 24px;
+  margin-right: 24px;
+  width: 390px;
+  height: 524px;
+  border-radius: 16px;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 16px 24px 24px 24px;
+  display: none;
+}
+.result_info {
+  display: flex;
+  justify-content: space-between;
+}
+.result_info1 {
+  display: flex;
+}
+.result_block1 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.25px;
+  margin-bottom: 8px;
+}
+.result_block2 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.result_block3 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
+.result_block4 {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+.result_delivery {
+  padding: 8px 8px 12px 8px;
+  margin-top: 12px;
+  margin-bottom: 24px;
+  width: 364px;
+  height: 32px;
+  display: flex;
+  border-radius: 8px;
+  background-color: rgba(246, 246, 250, 1);
+}
+.result_galochka {
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+  margin-right: 8px;
+}
+.result_a {
+  text-decoration: none;
+  color: rgba(203, 17, 171, 1);
+}
+.result_margin {
+  margin-top: 24px;
+}
+.result_margin2 {
+  margin-top: 8px;
+  margin-bottom: 12px;
+}
+.result_margin3 {
+  margin-bottom: 8px;
+}
+.result_margin4 {
+  margin-left: 8px;
+}
+.result_payment {
+  padding: 8px 8px 12px 8px;
+  width: 364px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: rgba(246, 246, 250, 1);
+}
+.result_payment__flex {
+  display: flex;
+}
+.result_btn {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  width: 380px;
+  height: 44px;
+  border-radius: 8px;
+  background-color: rgba(203, 17, 171, 1);
+  border: 1px solid rgba(203, 17, 171, 1);
+  color: rgba(255, 255, 255, 1);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+}
+.result_btn:active {
+  background-color: rgb(245, 10, 206);
+  border: 1px solid rgb(245, 10, 206);
+}
+.cursor {
+  cursor: pointer;
+}
+.custom_checkbox__marg {
+  margin: 0;
+}
