@@ -320,7 +320,7 @@
 }
 
 .delivery_h2_mobile {
-  margin-top: 18px;
+  margin-top: 10px;
   margin-bottom: 10px;
   font-weight: 700;
   font-size: 20px;
@@ -355,6 +355,12 @@
   height: 56px;
   border-radius: 8px;
   margin-bottom: 20px;
+}
+.delivery_h2 {
+  margin: 10px 0px 10px 10px;
+}
+.text-field {
+  height: 70px;
 }
 .main_delivery__bot {
   margin-left: -8px;

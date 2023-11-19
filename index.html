@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="./CSS/Delivery.css" />
     <link rel="stylesheet" href="./CSS/result.css" />
     <link rel="stylesheet" href="./CSS/media.css" />
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./CSS/modal.css" />
   </head>
   <body>
     <header class="header">
@@ -53,6 +53,241 @@
         </div>
       </div>
     </header>
+    <div id="page_modal" class="page_modal">
+      <div class="page_modal-window">
+        <div class="modal_flex">
+          <h2 class="page_modal-h2">Способ оплаты</h2>
+          <button id="modalCross" class="modal_btn-close">
+            <img src="./images/cross.svg" alt="" />
+          </button>
+        </div>
+        <div class="result_info1 result_margin2">
+          <label class="label_check2">
+            <input
+              class="checkbox2 real_checkbox2"
+              type="checkbox"
+              value="option1"
+              name="option"
+              onchange="updateCheckboxes(this)"
+            />
+            <span class="custom_checkbox2"></span>
+          </label>
+          <img src="./images/mir.svg" alt="" />
+          <p class="payment_p1">
+            1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234&nbsp;&nbsp; 01/30
+          </p>
+        </div>
+        <div class="result_info1 result_margin2">
+          <label class="label_check2">
+            <input
+              class="checkbox2 real_checkbox2"
+              type="checkbox"
+              value="option2"
+              name="option"
+              onchange="updateCheckboxes(this)"
+            />
+            <span class="custom_checkbox2"></span>
+          </label>
+          <img src="./images/visa.svg" alt="" />
+          <p class="payment_p1">
+            1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234&nbsp;&nbsp; 01/30
+          </p>
+        </div>
+        <div class="result_info1 result_margin2">
+          <label class="label_check2">
+            <input
+              class="checkbox2 real_checkbox2"
+              type="checkbox"
+              value="option3"
+              name="option"
+              onchange="updateCheckboxes(this)"
+            />
+            <span class="custom_checkbox2"></span>
+          </label>
+          <img src="./images/card1.svg" alt="" />
+          <p class="payment_p1">
+            1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234&nbsp;&nbsp; 01/30
+          </p>
+        </div>
+        <div class="result_info1 result_margin2">
+          <label class="label_check2">
+            <input
+              class="checkbox2 real_checkbox2"
+              type="checkbox"
+              value="option4"
+              name="option"
+              onchange="updateCheckboxes(this)"
+            />
+            <span class="custom_checkbox2"></span>
+          </label>
+          <img src="./images/card2.svg" alt="" />
+          <p class="payment_p1">
+            1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234&nbsp;&nbsp; 01/30
+          </p>
+        </div>
+        <button class="page_modal-btn">Выбрать</button>
+      </div>
+      <div class="overlay"></div>
+    </div>
+    <div id="page_modal2" class="page_modal2">
+      <div class="page_modal-window2">
+        <div class="modal_flex">
+          <h2 class="page_modal-h2">Способ доставка</h2>
+          <button id="modalCross2" class="modal_btn-close">
+            <img src="./images/cross.svg" alt="" />
+          </button>
+        </div>
+        <div>
+          <button class="page_modal-btn2">В пункт выдачи</button>
+          <button class="page_modal-btn2">Курьером</button>
+        </div>
+        <p class="page_modal-window2__p">Мои адреса</p>
+        <div class="modal_flex">
+          <div class="modal_flex2">
+            <label class="label_check2">
+              <input
+                class="checkbox2 real_checkbox2"
+                type="checkbox"
+                value="option1"
+                name="option"
+                onchange="updateCheckboxes(this)"
+              />
+              <span class="custom_checkbox2"></span>
+            </label>
+            <p class="page_modal-window2__p2">Бишкек, улица Табышалиева, 57</p>
+          </div>
+          <svg
+            class="cursor"
+            id="svg-jsB7"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="Basket7-1"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+              fill="black"
+            />
+            <path
+              id="Basket7-2"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+              fill="black"
+            />
+            <path
+              id="Basket7-3"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div class="modal_flex">
+          <div class="modal_flex2">
+            <label class="label_check2">
+              <input
+                class="checkbox2 real_checkbox2"
+                type="checkbox"
+                value="option1"
+                name="option"
+                onchange="updateCheckboxes(this)"
+              />
+              <span class="custom_checkbox2"></span>
+            </label>
+            <p class="page_modal-window2__p2">
+              Бишкек, улица Жукеева-Пудовкина, 77/1
+            </p>
+          </div>
+          <svg
+            class="cursor"
+            id="svg-jsB8"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="Basket8-1"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+              fill="black"
+            />
+            <path
+              id="Basket8-2"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+              fill="black"
+            />
+            <path
+              id="Basket8-3"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <div class="modal_flex">
+          <div class="modal_flex2">
+            <label class="label_check2">
+              <input
+                class="checkbox2 real_checkbox2"
+                type="checkbox"
+                value="option1"
+                name="option"
+                onchange="updateCheckboxes(this)"
+              />
+              <span class="custom_checkbox2"></span>
+            </label>
+            <p class="page_modal-window2__p2">
+              Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+            </p>
+          </div>
+          <svg
+            class="cursor"
+            id="svg-jsB9"
+            width="16"
+            height="16"
+            viewBox="0 0 16 16"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              id="Basket9-1"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+              fill="black"
+            />
+            <path
+              id="Basket9-2"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+              fill="black"
+            />
+            <path
+              id="Basket9-3"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+              fill="black"
+            />
+          </svg>
+        </div>
+        <button class="page_modal-btn btn-marg">Выбрать</button>
+      </div>
+      <div class="overlay2"></div>
+    </div>
     <main class="main">
       <div class="container">
         <div class="page">
@@ -60,216 +295,419 @@
             <div class="main_shop">
               <div class="topline"></div>
               <h2 class="main_h2">Корзина</h2>
-
               <div class="main_shop__flex">
                 <label class="label_check">
-                  <input class="checkbox real_checkbox" type="checkbox" />
+                  <input
+                    class="checkbox real_checkbox"
+                    type="checkbox"
+                    name="check"
+                    onclick="selectAll(this)"
+                  />
                   <span class="custom_checkbox"></span>
                   <p class="checkbox_p">Выбрать все</p>
                 </label>
-                <img class="cursor" src="./images/icon10.svg" alt="" />
+                <button id="strelka" class="strelkaBtn strelkaBtnMarg">
+                  <img class="cursor" src="./images/icon10.svg" alt="" />
+                </button>
               </div>
+              <p class="main_h2_active"></p>
               <div class="main_products">
                 <div class="main_line"></div>
-                <div class="main_product">
-                  <div class="main_product__left">
-                    <label class="label_checkbox">
-                      <input class="checkbox real_checkbox" type="checkbox" />
-                      <span class="custom_checkbox"></span>
-                      <img
-                        class="basket_image"
-                        src="./images/image1.jpg"
-                        alt=""
-                      />
-                    </label>
-                    <div class="product_info">
-                      <p class="main_product__p1">Футболка UZcotton Мужская</p>
-                      <span class="main_product__span">Цвет: белый</span>
-                      <span class="main_product__span">Размер: 56</span>
-                      <p class="main_product__p2">
-                        Коледино WB ООО Вайлдберриз
-                        <img class="img_p2" src="./images/icon-20.svg" alt="" />
-                      </p>
+                <div class="main_toggle">
+                  <div class="main_product">
+                    <div class="main_product__left">
+                      <label class="label_checkbox">
+                        <input
+                          class="checkbox real_checkbox"
+                          name="check"
+                          type="checkbox"
+                        />
+                        <span class="custom_checkbox"></span>
+                        <img
+                          class="basket_image"
+                          src="./images/image1.jpg"
+                          alt=""
+                        />
+                      </label>
+                      <div class="product_info">
+                        <p class="main_product__p1">
+                          Футболка UZcotton Мужская
+                        </p>
+                        <span class="main_product__span">Цвет: белый</span>
+                        <span class="main_product__span">Размер: 56</span>
+                        <p class="main_product__p2">
+                          Коледино WB ООО Вайлдберриз
+                          <a class="modal_link" href="">
+                            <img
+                              class="img_p2"
+                              src="./images/icon-20.svg"
+                              alt=""
+                            />
+                            <span>
+                              <img
+                                class="modal_img"
+                                src="./images/modal1.png"
+                                alt=""
+                              />
+                            </span>
+                          </a>
+                        </p>
+                      </div>
                     </div>
-                  </div>
+                    <div class="main_product__right">
+                      <div>
+                        <div class="counter">
+                          <button
+                            id="decrement_btn"
+                            class="counter__btn"
+                            data-direction="minus"
+                          >
+                            -
+                          </button>
+                          <input
+                            disabled
+                            id="counter_value"
+                            type="text"
+                            value="1"
+                            class="counter__value"
+                          />
+                          <button
+                            id="increment_btn"
+                            class="counter__btn"
+                            data-direction="plus"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <p class="counter_red">осталось 2 шт.</p>
+                        <div class="counter_images">
+                          <svg
+                            class="cursor svg-js1"
+                            width="24"
+                            height="20"
+                            viewBox="0 0 20 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              class="svg-path"
+                              id="svgInternalID1"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3.03399 2.05857C2.26592 2.75224 1.76687 3.83284 1.99496 5.42928C2.22335 7.02783 3.26497 8.68522 4.80439 10.3478C6.25868 11.9184 8.10965 13.4437 9.99999 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.7351 8.68521 17.7767 7.02783 18.005 5.4293C18.2331 3.83285 17.734 2.75224 16.9659 2.05856C16.1767 1.34572 15.055 1 14 1C12.132 1 11.0924 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1583 3.04882 9.84169 3.04882 9.64643 2.85355C9.59644 2.80356 9.54185 2.7466 9.48227 2.68443C8.9076 2.08479 7.868 1 5.99999 1C4.94498 1 3.82328 1.34573 3.03399 2.05857ZM2.36374 1.31643C3.37372 0.404274 4.75205 0 5.99999 0C8.07126 0 9.34542 1.11257 9.99999 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2669 3.66715 18.995 5.5707C18.7233 7.47217 17.515 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87776 16.0333 9.69999 15.9C7.69356 14.3952 5.66446 12.7485 4.07063 11.0272C2.48506 9.31478 1.27668 7.47217 1.00501 5.57072C0.733043 3.66716 1.33253 2.24776 2.36374 1.31643Z"
+                              fill="black"
+                            />
+                          </svg>
 
-                  <div class="main_product__right">
-                    <div>
-                      <div class="counter">
-                        <button
-                          id="decrement_btn"
-                          class="counter__btn"
-                          data-direction="minus"
-                        >
-                          -
-                        </button>
+                          <svg
+                            class="counter_img2 cursor"
+                            id="svg-jsB1"
+                            width="24"
+                            height="20"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              id="Basket1-1"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                              fill="black"
+                            />
+                            <path
+                              id="Basket1-2"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                              fill="black"
+                            />
+                            <path
+                              id="Basket1-3"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="right_sum">522 com</p>
+                        <del class="right_sale modal_link"
+                          >1051 com
+                          <span>
+                            <img
+                              class="modal_img img_pay"
+                              src="./images/modal3.png"
+                              alt=""
+                            />
+                          </span>
+                        </del>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="main_product">
+                    <div class="main_product__left">
+                      <label class="label_checkbox">
                         <input
-                          disabled
-                          id="counter_value"
-                          type="text"
-                          value="1"
-                          class="counter__value"
+                          class="checkbox real_checkbox"
+                          name="check"
+                          type="checkbox"
                         />
-                        <button
-                          id="increment_btn"
-                          class="counter__btn"
-                          data-direction="plus"
-                        >
-                          +
-                        </button>
-                      </div>
-                      <p class="counter_red">осталось 2 шт.</p>
-                      <div class="counter_images">
+                        <span class="custom_checkbox"></span>
                         <img
-                          class="counter_img1 cursor"
-                          src="./images/Vector1.svg"
+                          class="basket_image"
+                          src="./images/image2.jpg"
                           alt=""
                         />
-                        <img
-                          class="counter_img2 cursor"
-                          src="./images/Vector2.svg"
-                          alt=""
-                        />
+                      </label>
+                      <div class="product_info">
+                        <p class="main_product__p1">
+                          Силиконовый чехол картхолдер (отверстия) для карт,
+                          прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                        </p>
+                        <span class="main_product__span">Цвет: прозрачный</span>
+                        <p class="main_product__p2">
+                          Коледино WB ООО Мегапрофстиль
+                          <a class="modal_link" href="">
+                            <img
+                              class="img_p2"
+                              src="./images/icon-20.svg"
+                              alt=""
+                            />
+                            <span>
+                              <img
+                                class="modal_img"
+                                src="./images/modal1.png"
+                                alt=""
+                              />
+                            </span>
+                          </a>
+                        </p>
                       </div>
                     </div>
-                    <div>
-                      <p class="right_sum">522 com</p>
-                      <del class="right_sale">1051 com</del>
+                    <div class="main_product__right">
+                      <div>
+                        <div class="counter">
+                          <button
+                            id="decrement_btn"
+                            class="counter__btn"
+                            data-direction="minus"
+                          >
+                            -
+                          </button>
+                          <input
+                            disabled
+                            id="counter_value"
+                            type="text"
+                            value="200"
+                            class="counter__value"
+                          />
+                          <button
+                            id="increment_btn"
+                            class="counter__btn"
+                            data-direction="plus"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <p class="counter_red"></p>
+                        <div class="counter_images">
+                          <svg
+                            class="cursor svg-js2"
+                            width="24"
+                            height="20"
+                            viewBox="0 0 20 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              class="svg-path"
+                              id="svgInternalID2"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3.03399 2.05857C2.26592 2.75224 1.76687 3.83284 1.99496 5.42928C2.22335 7.02783 3.26497 8.68522 4.80439 10.3478C6.25868 11.9184 8.10965 13.4437 9.99999 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.7351 8.68521 17.7767 7.02783 18.005 5.4293C18.2331 3.83285 17.734 2.75224 16.9659 2.05856C16.1767 1.34572 15.055 1 14 1C12.132 1 11.0924 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1583 3.04882 9.84169 3.04882 9.64643 2.85355C9.59644 2.80356 9.54185 2.7466 9.48227 2.68443C8.9076 2.08479 7.868 1 5.99999 1C4.94498 1 3.82328 1.34573 3.03399 2.05857ZM2.36374 1.31643C3.37372 0.404274 4.75205 0 5.99999 0C8.07126 0 9.34542 1.11257 9.99999 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2669 3.66715 18.995 5.5707C18.7233 7.47217 17.515 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87776 16.0333 9.69999 15.9C7.69356 14.3952 5.66446 12.7485 4.07063 11.0272C2.48506 9.31478 1.27668 7.47217 1.00501 5.57072C0.733043 3.66716 1.33253 2.24776 2.36374 1.31643Z"
+                              fill="black"
+                            />
+                          </svg>
+                          <svg
+                            class="counter_img2 cursor"
+                            id="svg-jsB2"
+                            width="24"
+                            height="20"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              id="Basket2-1"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                              fill="black"
+                            />
+                            <path
+                              id="Basket2-2"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                              fill="black"
+                            />
+                            <path
+                              id="Basket2-3"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
+                      </div>
+                      <div>
+                        <p class="right_sum">2 100 047 com</p>
+                        <del class="right_sale modal_link"
+                          >2 300 047 com
+                          <span>
+                            <img
+                              class="modal_img img_pay"
+                              src="./images/modal3.png"
+                              alt=""
+                            />
+                          </span>
+                        </del>
+                      </div>
                     </div>
                   </div>
-                </div>
-                <div class="main_product">
-                  <div class="main_product__left">
-                    <label class="label_checkbox">
-                      <input class="checkbox real_checkbox" type="checkbox" />
-                      <span class="custom_checkbox"></span>
-                      <img
-                        class="basket_image"
-                        src="./images/image2.jpg"
-                        alt=""
-                      />
-                    </label>
-                    <div class="product_info">
-                      <p class="main_product__p1">
-                        Силиконовый чехол картхолдер (отверстия) для карт,
-                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe
-                      </p>
-                      <span class="main_product__span">Цвет: прозрачный</span>
-                      <p class="main_product__p2">
-                        Коледино WB ООО Мегапрофстиль
-                        <img class="img_p2" src="./images/icon-20.svg" alt="" />
-                      </p>
-                    </div>
-                  </div>
-                  <div class="main_product__right">
-                    <div>
-                      <div class="counter">
-                        <button
-                          id="decrement_btn"
-                          class="counter__btn"
-                          data-direction="minus"
-                        >
-                          -
-                        </button>
+                  <div class="main_product">
+                    <div class="main_product__left">
+                      <label class="label_checkbox">
                         <input
-                          disabled
-                          id="counter_value"
-                          type="text"
-                          value="200"
-                          class="counter__value"
+                          class="checkbox real_checkbox"
+                          name="check"
+                          type="checkbox"
                         />
-                        <button
-                          id="increment_btn"
-                          class="counter__btn"
-                          data-direction="plus"
-                        >
-                          +
-                        </button>
-                      </div>
-                      <p class="counter_red"></p>
-                      <div class="counter_images">
+                        <span class="custom_checkbox"></span>
                         <img
-                          class="counter_img1 cursor"
-                          src="./images/Vector1.svg"
+                          class="basket_image"
+                          src="./images/image3.jpg"
                           alt=""
                         />
-                        <img
-                          class="counter_img2 cursor"
-                          src="./images/Vector2.svg"
-                          alt=""
-                        />
+                      </label>
+                      <div class="product_info">
+                        <p class="main_product__p1">
+                          Карандаши цветные Faber-Castell "Замок", набор 24
+                          цвета, заточенные, шестигранные, Faber-Castell
+                        </p>
+                        <p class="main_product__p2">
+                          Коледино WB ООО Вайлдберриз
+                          <a class="modal_link" href="">
+                            <img
+                              class="img_p2"
+                              src="./images/icon-20.svg"
+                              alt=""
+                            />
+                            <span>
+                              <img
+                                class="modal_img"
+                                src="./images/modal1.png"
+                                alt=""
+                              />
+                            </span>
+                          </a>
+                        </p>
                       </div>
                     </div>
-                    <div>
-                      <p class="right_sum">2 100 047 com</p>
-                      <del class="right_sale">2 300 047 com</del>
-                    </div>
-                  </div>
-                </div>
-                <div class="main_product">
-                  <div class="main_product__left">
-                    <label class="label_checkbox">
-                      <input class="checkbox real_checkbox" type="checkbox" />
-                      <span class="custom_checkbox"></span>
-                      <img
-                        class="basket_image"
-                        src="./images/image3.jpg"
-                        alt=""
-                      />
-                    </label>
-                    <div class="product_info">
-                      <p class="main_product__p1">
-                        Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
-                        заточенные, шестигранные, Faber-Castell
-                      </p>
-                      <p class="main_product__p2">
-                        Коледино WB ООО Вайлдберриз
-                        <img class="img_p2" src="./images/icon-20.svg" alt="" />
-                      </p>
-                    </div>
-                  </div>
-                  <div class="main_product__right">
-                    <div>
-                      <div class="counter">
-                        <button
-                          id="decrement_btn"
-                          class="counter__btn"
-                          data-direction="minus"
-                        >
-                          -
-                        </button>
-                        <input
-                          disabled
-                          id="counter_value"
-                          type="text"
-                          value="2"
-                          class="counter__value"
-                        />
-                        <button
-                          id="increment_btn"
-                          class="counter__btn"
-                          data-direction="plus"
-                        >
-                          +
-                        </button>
+                    <div class="main_product__right">
+                      <div>
+                        <div class="counter">
+                          <button
+                            id="decrement_btn"
+                            class="counter__btn"
+                            data-direction="minus"
+                          >
+                            -
+                          </button>
+                          <input
+                            disabled
+                            id="counter_value"
+                            type="text"
+                            value="2"
+                            class="counter__value"
+                          />
+                          <button
+                            id="increment_btn"
+                            class="counter__btn"
+                            data-direction="plus"
+                          >
+                            +
+                          </button>
+                        </div>
+                        <p class="counter_red">осталось 2 шт.</p>
+                        <div class="counter_images">
+                          <svg
+                            class="cursor svg-js3"
+                            width="24"
+                            height="20"
+                            viewBox="0 0 20 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              class="svg-path"
+                              id="svgInternalID3"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M3.03399 2.05857C2.26592 2.75224 1.76687 3.83284 1.99496 5.42928C2.22335 7.02783 3.26497 8.68522 4.80439 10.3478C6.25868 11.9184 8.10965 13.4437 9.99999 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.7351 8.68521 17.7767 7.02783 18.005 5.4293C18.2331 3.83285 17.734 2.75224 16.9659 2.05856C16.1767 1.34572 15.055 1 14 1C12.132 1 11.0924 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1583 3.04882 9.84169 3.04882 9.64643 2.85355C9.59644 2.80356 9.54185 2.7466 9.48227 2.68443C8.9076 2.08479 7.868 1 5.99999 1C4.94498 1 3.82328 1.34573 3.03399 2.05857ZM2.36374 1.31643C3.37372 0.404274 4.75205 0 5.99999 0C8.07126 0 9.34542 1.11257 9.99999 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2669 3.66715 18.995 5.5707C18.7233 7.47217 17.515 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87776 16.0333 9.69999 15.9C7.69356 14.3952 5.66446 12.7485 4.07063 11.0272C2.48506 9.31478 1.27668 7.47217 1.00501 5.57072C0.733043 3.66716 1.33253 2.24776 2.36374 1.31643Z"
+                              fill="black"
+                            />
+                          </svg>
+                          <svg
+                            class="counter_img2 cursor"
+                            id="svg-jsB3"
+                            width="24"
+                            height="20"
+                            viewBox="0 0 16 16"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              id="Basket3-1"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                              fill="black"
+                            />
+                            <path
+                              id="Basket3-2"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                              fill="black"
+                            />
+                            <path
+                              id="Basket3-3"
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                              fill="black"
+                            />
+                          </svg>
+                        </div>
                       </div>
-                      <p class="counter_red">осталось 2 шт.</p>
-                      <div class="counter_images">
-                        <img
-                          class="counter_img1 cursor"
-                          src="./images/Vector1.svg"
-                          alt=""
-                        />
-                        <img
-                          class="counter_img2 cursor"
-                          src="./images/Vector2.svg"
-                          alt=""
-                        />
+                      <div>
+                        <p class="right_sum">494 com</p>
+                        <del class="right_sale modal_link"
+                          >950 com
+                          <span>
+                            <img
+                              class="modal_img img_pay"
+                              src="./images/modal3.png"
+                              alt=""
+                            />
+                          </span>
+                        </del>
                       </div>
-                    </div>
-                    <div>
-                      <p class="right_sum">494 com</p>
-                      <del class="right_sale">950 com</del>
                     </div>
                   </div>
                 </div>
@@ -280,11 +718,15 @@
               <h2 class="main_h2">Корзина</h2>
               <div class="a">
                 <label>
-                  <input class="checkbox real_checkbox" type="checkbox" />
+                  <input
+                    class="checkbox real_checkbox"
+                    type="checkbox"
+                    name="check2"
+                    onclick="selectAll2(this)"
+                  />
                   <span class="custom_checkbox"></span>
                   Выбрать все
                 </label>
-                <img class="cursor" src="./images/icon10.svg" alt="" />
                 <div class="main_line"></div>
               </div>
               <div class="main_shop__flex"></div>
@@ -292,7 +734,11 @@
                 <div class="shop_mobile_basket">
                   <div class="left_mobile">
                     <label class="label_checkbox">
-                      <input class="checkbox real_checkbox" type="checkbox" />
+                      <input
+                        class="checkbox real_checkbox"
+                        type="checkbox"
+                        name="check2"
+                      />
                       <span class="custom_checkbox custom_checkbox-2"></span>
                       <img
                         class="basket_image"
@@ -347,7 +793,11 @@
                 <div class="shop_mobile_basket">
                   <div class="left_mobile">
                     <label class="label_checkbox">
-                      <input class="checkbox real_checkbox" type="checkbox" />
+                      <input
+                        class="checkbox real_checkbox"
+                        type="checkbox"
+                        name="check2"
+                      />
                       <span class="custom_checkbox custom_checkbox-2"></span>
                       <img
                         class="basket_image"
@@ -404,7 +854,11 @@
                 <div class="shop_mobile_basket">
                   <div class="left_mobile">
                     <label class="label_checkbox">
-                      <input class="checkbox real_checkbox" type="checkbox" />
+                      <input
+                        class="checkbox real_checkbox"
+                        type="checkbox"
+                        name="check2"
+                      />
                       <span class="custom_checkbox custom_checkbox-2"></span>
                       <img
                         class="basket_image"
@@ -516,97 +970,224 @@
             <div class="main_shop_block2">
               <div class="main_shop__flex">
                 <h2>Отсутствуют &#183; 3 товары</h2>
-                <img class="cursor" src="./images/icon10.svg" alt="" />
+                <button id="strelka2" class="strelkaBtn">
+                  <img class="cursor" src="./images/icon10.svg" alt="" />
+                </button>
               </div>
               <div class="main_line"></div>
-              <div class="main_product">
-                <div class="main_product__left">
-                  <img class="basket_image" src="./images/image4.jpg" alt="" />
-                  <div class="product_info">
-                    <p class="main_productshop2__p1">
-                      Футболка UZcotton Мужская
-                    </p>
-                    <span class="main_productshop2__span">Цвет: белый</span>
-                    <span class="main_productshop2__span">Размер: 56</span>
-                    <p class="main_productshop2__p2">
-                      Коледино WB ООО Вайлдберриз
-                      <img class="img_p2" src="./images/icon-20.svg" alt="" />
-                    </p>
+              <div class="main_shop_toggle2">
+                <div class="main_product">
+                  <div class="main_product__left">
+                    <img
+                      class="basket_image"
+                      src="./images/image4.jpg"
+                      alt=""
+                    />
+                    <div class="product_info">
+                      <p class="main_productshop2__p1">
+                        Футболка UZcotton Мужская
+                      </p>
+                      <span class="main_productshop2__span">Цвет: белый</span>
+                      <span class="main_productshop2__span">Размер: 56</span>
+                      <p class="main_productshop2__p2">
+                        Коледино WB ООО Вайлдберриз
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main_product__right">
+                    <div class="counter_images shop2">
+                      <svg
+                        class="cursor counter_img1 svg-js4"
+                        width="24"
+                        height="20"
+                        viewBox="0 0 20 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="svg-path"
+                          id="svgInternalID4"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.03399 2.05857C2.26592 2.75224 1.76687 3.83284 1.99496 5.42928C2.22335 7.02783 3.26497 8.68522 4.80439 10.3478C6.25868 11.9184 8.10965 13.4437 9.99999 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.7351 8.68521 17.7767 7.02783 18.005 5.4293C18.2331 3.83285 17.734 2.75224 16.9659 2.05856C16.1767 1.34572 15.055 1 14 1C12.132 1 11.0924 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1583 3.04882 9.84169 3.04882 9.64643 2.85355C9.59644 2.80356 9.54185 2.7466 9.48227 2.68443C8.9076 2.08479 7.868 1 5.99999 1C4.94498 1 3.82328 1.34573 3.03399 2.05857ZM2.36374 1.31643C3.37372 0.404274 4.75205 0 5.99999 0C8.07126 0 9.34542 1.11257 9.99999 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2669 3.66715 18.995 5.5707C18.7233 7.47217 17.515 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87776 16.0333 9.69999 15.9C7.69356 14.3952 5.66446 12.7485 4.07063 11.0272C2.48506 9.31478 1.27668 7.47217 1.00501 5.57072C0.733043 3.66716 1.33253 2.24776 2.36374 1.31643Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <svg
+                        class="counter_img2 cursor"
+                        id="svg-jsB4"
+                        width="24"
+                        height="20"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          id="Basket4-1"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                          fill="black"
+                        />
+                        <path
+                          id="Basket4-2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                          fill="black"
+                        />
+                        <path
+                          id="Basket4-3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-                <div class="main_product__right">
-                  <div class="counter_images shop2">
+                <div class="main_product">
+                  <div class="main_product__left">
                     <img
-                      class="counter_img1 cursor"
-                      src="./images/Vector1.svg"
+                      class="basket_image"
+                      src="./images/image5.jpg"
                       alt=""
                     />
-                    <img
-                      class="counter_img2 cursor"
-                      src="./images/Vector2.svg"
-                      alt=""
-                    />
+                    <div class="product_info">
+                      <p class="main_productshop2__p1">
+                        Силиконовый чехол картхолдер (отверстия) для карт,
+                        прозрачный кейс бампер на Apple iPhone XR, MobiSafe
+                      </p>
+                      <span class="main_productshop2__span"
+                        >Цвет: прозрачный</span
+                      >
+                      <p class="main_productshop2__p2">
+                        Коледино WB ООО Мегапрофстиль
+                      </p>
+                    </div>
+                  </div>
+                  <div class="main_product__right">
+                    <div class="counter_images shop2">
+                      <svg
+                        class="cursor counter_img1 svg-js5"
+                        width="24"
+                        height="20"
+                        viewBox="0 0 20 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="svg-path"
+                          id="svgInternalID5"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.03399 2.05857C2.26592 2.75224 1.76687 3.83284 1.99496 5.42928C2.22335 7.02783 3.26497 8.68522 4.80439 10.3478C6.25868 11.9184 8.10965 13.4437 9.99999 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.7351 8.68521 17.7767 7.02783 18.005 5.4293C18.2331 3.83285 17.734 2.75224 16.9659 2.05856C16.1767 1.34572 15.055 1 14 1C12.132 1 11.0924 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1583 3.04882 9.84169 3.04882 9.64643 2.85355C9.59644 2.80356 9.54185 2.7466 9.48227 2.68443C8.9076 2.08479 7.868 1 5.99999 1C4.94498 1 3.82328 1.34573 3.03399 2.05857ZM2.36374 1.31643C3.37372 0.404274 4.75205 0 5.99999 0C8.07126 0 9.34542 1.11257 9.99999 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2669 3.66715 18.995 5.5707C18.7233 7.47217 17.515 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87776 16.0333 9.69999 15.9C7.69356 14.3952 5.66446 12.7485 4.07063 11.0272C2.48506 9.31478 1.27668 7.47217 1.00501 5.57072C0.733043 3.66716 1.33253 2.24776 2.36374 1.31643Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <svg
+                        class="counter_img2 cursor"
+                        id="svg-jsB5"
+                        width="24"
+                        height="20"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          id="Basket5-1"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                          fill="black"
+                        />
+                        <path
+                          id="Basket5-2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                          fill="black"
+                        />
+                        <path
+                          id="Basket5-3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="main_product">
-                <div class="main_product__left">
-                  <img class="basket_image" src="./images/image5.jpg" alt="" />
-                  <div class="product_info">
-                    <p class="main_productshop2__p1">
-                      Силиконовый чехол картхолдер (отверстия) для карт,
-                      прозрачный кейс бампер на Apple iPhone XR, MobiSafe
-                    </p>
-                    <span class="main_productshop2__span"
-                      >Цвет: прозрачный</span
-                    >
-                    <p class="main_productshop2__p2">
-                      Коледино WB ООО Мегапрофстиль
-                      <img class="img_p2" src="./images/icon-20.svg" alt="" />
-                    </p>
+                <div class="main_product">
+                  <div class="main_product__left">
+                    <img
+                      class="basket_image"
+                      src="./images/image6.jpg"
+                      alt=""
+                    />
+                    <div class="product_info">
+                      <p class="main_productshop2__p1">
+                        Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
+                        заточенные, шестигранные, Faber-Castell
+                      </p>
+                      <p class="main_productshop2__p2">
+                        Коледино WB ООО Вайлдберриз
+                      </p>
+                    </div>
                   </div>
-                </div>
-                <div class="main_product__right">
-                  <div class="counter_images shop2">
-                    <img
-                      class="counter_img1 cursor"
-                      src="./images/Vector1.svg"
-                      alt=""
-                    />
-                    <img
-                      class="counter_img2 cursor"
-                      src="./images/Vector2.svg"
-                      alt=""
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="main_product">
-                <div class="main_product__left">
-                  <img class="basket_image" src="./images/image6.jpg" alt="" />
-                  <div class="product_info">
-                    <p class="main_productshop2__p1">
-                      Карандаши цветные Faber-Castell "Замок", набор 24 цвета,
-                      заточенные, шестигранные, Faber-Castell
-                    </p>
-                    <p class="main_productshop2__p2">
-                      Коледино WB ООО Вайлдберриз
-                      <img class="img_p2" src="./images/icon-20.svg" alt="" />
-                    </p>
-                  </div>
-                </div>
-                <div class="main_product__right">
-                  <div class="counter_images shop2">
-                    <img
-                      class="counter_img1 cursor"
-                      src="./images/Vector1.svg"
-                      alt=""
-                    />
-                    <img
-                      class="counter_img2 cursor"
-                      src="./images/Vector2.svg"
-                      alt=""
-                    />
+                  <div class="main_product__right">
+                    <div class="counter_images shop2">
+                      <svg
+                        class="cursor counter_img1 svg-js6"
+                        width="24"
+                        height="20"
+                        viewBox="0 0 20 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          class="svg-path"
+                          id="svgInternalID6"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M3.03399 2.05857C2.26592 2.75224 1.76687 3.83284 1.99496 5.42928C2.22335 7.02783 3.26497 8.68522 4.80439 10.3478C6.25868 11.9184 8.10965 13.4437 9.99999 14.874C11.8903 13.4437 13.7413 11.9184 15.1956 10.3478C16.7351 8.68521 17.7767 7.02783 18.005 5.4293C18.2331 3.83285 17.734 2.75224 16.9659 2.05856C16.1767 1.34572 15.055 1 14 1C12.132 1 11.0924 2.08479 10.5177 2.68443C10.4581 2.7466 10.4035 2.80356 10.3535 2.85355C10.1583 3.04882 9.84169 3.04882 9.64643 2.85355C9.59644 2.80356 9.54185 2.7466 9.48227 2.68443C8.9076 2.08479 7.868 1 5.99999 1C4.94498 1 3.82328 1.34573 3.03399 2.05857ZM2.36374 1.31643C3.37372 0.404274 4.75205 0 5.99999 0C8.07126 0 9.34542 1.11257 9.99999 1.77862C10.6545 1.11257 11.9287 0 14 0C15.2479 0 16.6262 0.404275 17.6362 1.31644C18.6674 2.24776 19.2669 3.66715 18.995 5.5707C18.7233 7.47217 17.515 9.31479 15.9294 11.0272C14.3355 12.7486 12.3064 14.3952 10.3 15.9C10.1222 16.0333 9.87776 16.0333 9.69999 15.9C7.69356 14.3952 5.66446 12.7485 4.07063 11.0272C2.48506 9.31478 1.27668 7.47217 1.00501 5.57072C0.733043 3.66716 1.33253 2.24776 2.36374 1.31643Z"
+                          fill="black"
+                        />
+                      </svg>
+                      <svg
+                        class="counter_img2 cursor"
+                        id="svg-jsB6"
+                        width="24"
+                        height="20"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          id="Basket6-1"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M0.5 3C0.5 2.72386 0.723858 2.5 1 2.5H15C15.2761 2.5 15.5 2.72386 15.5 3C15.5 3.27614 15.2761 3.5 15 3.5H1C0.723858 3.5 0.5 3.27614 0.5 3Z"
+                          fill="black"
+                        />
+                        <path
+                          id="Basket6-2"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M1.4584 2.5H14.5059L13.6411 13.6926C13.5405 14.9947 12.4546 16 11.1486 16H4.84639C3.54299 16 2.45829 14.9986 2.35435 13.6994L1.4584 2.5ZM2.5416 3.5L3.35117 13.6196C3.41353 14.3992 4.06435 15 4.84639 15H11.1486C11.9322 15 12.5837 14.3968 12.6441 13.6155L13.4256 3.5H2.5416Z"
+                          fill="black"
+                        />
+                        <path
+                          id="Basket6-3"
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M11 3.5H5V1.46875C5 0.657582 5.65758 0 6.46875 0H9.53125C10.3424 0 11 0.657582 11 1.46875V3.5ZM6.46875 1C6.20987 1 6 1.20987 6 1.46875V2.5H10V1.46875C10 1.20987 9.79013 1 9.53125 1H6.46875Z"
+                          fill="black"
+                        />
+                      </svg>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -614,7 +1195,9 @@
             <div class="main_delivery">
               <div class="main_delivery__top">
                 <h2 class="delivery_h2">Способ доставки</h2>
-                <a class="delivery_a" href="">Изменить</a>
+                <button id="modal2Btn" class="delivery_a" href="">
+                  Изменить
+                </button>
               </div>
               <div class="main_delivery__mid">
                 <div class="delivery_blocks">
@@ -649,14 +1232,21 @@
                 <img class="galochka" src="./images/galochka.svg" alt="" />
                 <p>
                   Обратная доставка товаров на склад при отказе &#8213;
-                  <a href="" class="delivery_green">бесплатно</a>
+                  <a href="" class="delivery_green modal_link"
+                    >бесплатно
+                    <span>
+                      <img class="modal_img" src="./images/modal2.png" alt="" />
+                    </span>
+                  </a>
                 </p>
               </div>
             </div>
             <div class="main_delivery_mobile">
               <div class="main_delivery__top">
                 <h2 class="delivery_h2_mobile">Способ доставки</h2>
-                <a class="delivery_a" href="">Изменить</a>
+                <button id="modal2Btn2" class="delivery_a" href="">
+                  Изменить
+                </button>
               </div>
               <div>
                 <p class="delivery_mobile">Пункт выдачи</p>
@@ -714,7 +1304,9 @@
               <div class="payment_block">
                 <div class="payment_top">
                   <h2 class="delivery_h2">Способ оплаты</h2>
-                  <a href="" class="delivery_a">Изменить</a>
+                  <button id="modal1Btn" href="" class="delivery_a">
+                    Изменить
+                  </button>
                 </div>
                 <div class="payment_bot">
                   <img class="img_mir" src="./images/mir.svg" alt="" />
@@ -733,46 +1325,55 @@
               <div class="data_bot js-form">
                 <div class="text-field">
                   <input
-                    class="text-field__inp1 js-input"
+                    class="text-field__inp1 js-input1"
                     type="text"
                     required
                   />
                   <label id="name" class="text-field__placeholder">Имя</label>
                   <span class="span"></span>
+                  <p id="error_input1" class="error_input1 input_marg">
+                    Пустое поле
+                  </p>
                 </div>
                 <div class="text-field">
                   <input
-                    class="text-field__inp1 js-input"
+                    class="text-field__inp1 js-input2"
                     type="text"
                     required
                   />
                   <label class="text-field__placeholder">Фамилия</label>
+                  <p id="error_input2" class="error_input1 input_marg">
+                    Пустое поле
+                  </p>
                 </div>
                 <div class="text-field">
                   <input
-                    class="text-field__inp2 js-input js-input-email"
+                    class="text-field__inp2 js-input3 js-input-email"
                     type="text"
                     required
                   />
                   <label class="text-field__placeholder">Почта</label>
+                  <p id="error_input3" class="error_input2">Пустое поле</p>
                 </div>
                 <div class="text-field">
                   <input
-                    class="text-field__inp2 js-input js-input-phone"
+                    class="text-field__inp2 js-input4 js-input-phone"
                     type="tel"
                     value=""
                     required
                   />
                   <label class="text-field__placeholder">Телефон</label>
+                  <p id="error_input4" class="error_input2">Пустое поле</p>
                 </div>
                 <div class="text-field">
                   <input
-                    class="text-field__inp2 js-input"
+                    class="text-field__inp2 js-input5"
                     type="text"
                     required
                   />
                   <label class="text-field__placeholder">ИНН</label>
                   <p class="inn_p">Для таможенного оформления</p>
+                  <p id="error_input5" class="error_input2">Пустое поле</p>
                 </div>
               </div>
             </form>
@@ -840,7 +1441,10 @@
                   <label class="label_check">
                     <input class="checkbox real_checkbox" type="checkbox" />
                     <span class="custom_checkbox custom_checkbox__marg"></span>
-                    <p class="result_block4 result_margin3 result_margin4">
+                    <p
+                      id="changeSize"
+                      class="result_block4 result_margin3 result_margin4"
+                    >
                       Спишем оплату сразу
                     </p>
                   </label>
@@ -879,7 +1483,9 @@
             <div>
               <div class="result_info result_margin">
                 <p class="result_block3">Доставка в пункт выдачи</p>
-                <img class="cursor" src="./images/karandash.svg" alt="" />
+                <button id="btnkarandash1" class="btn-karandash">
+                  <img class="cursor" src="./images/karandash.svg" alt="" />
+                </button>
               </div>
               <p class="result_block4">
                 Бишкек, улица Ахматбека Суюмбаева, 12/1 <br />
@@ -890,13 +1496,20 @@
               <img class="result_galochka" src="./images/galochka.svg" alt="" />
               <p class="result_block4">
                 обратная доставка товаров на склад при отказе &#8213;
-                <a href="" class="delivery_green">бесплатно</a>
+                <a href="" class="delivery_green modal_link"
+                  >бесплатно
+                  <span>
+                    <img class="modal_img" src="./images/modal2.png" alt="" />
+                  </span>
+                </a>
               </p>
             </div>
             <div>
               <div class="result_info">
                 <p class="result_block3">Оплата картой</p>
-                <img class="cursor" src="./images/karandash.svg" alt="" />
+                <button id="btnkarandash2" class="btn-karandash">
+                  <img class="cursor" src="./images/karandash.svg" alt="" />
+                </button>
               </div>
               <div class="result_info1 result_margin2">
                 <img src="./images/mir.svg" alt="" />
@@ -909,16 +1522,25 @@
             <div class="result_payment">
               <div class="result_payment__flex">
                 <label class="label_check">
-                  <input class="checkbox real_checkbox" type="checkbox" />
+                  <input
+                    id="result_checkbox"
+                    class="checkbox real_checkbox"
+                    type="checkbox"
+                  />
                   <span class="custom_checkbox custom_checkbox__marg"></span>
-                  <p class="result_block4 result_margin3 result_margin4">
+                  <p
+                    id="changeSize"
+                    class="result_block4 result_margin3 result_margin4"
+                  >
                     Спишем оплату сразу
                   </p>
                 </label>
               </div>
-              <p class="result_block4">Спишем оплату с карты при получении</p>
+              <p id="p-delete" class="result_block4">
+                Спишем оплату с карты при получении
+              </p>
             </div>
-            <button id="submit" type="submit" class="result_btn js-form">
+            <button id="btnSubmit" type="submit" class="result_btn js-form">
               Заказать
             </button>
             <div class="result_payment__flex">
@@ -931,6 +1553,7 @@
         </div>
       </div>
     </main>
+    <div class="divFooter"></div>
     <footer>
       <div class="footer">
         <div class="botline"></div>
@@ -944,5 +1567,6 @@
         <img class="footer_img cursor" src="./images/footer-5.svg" alt="" />
       </div>
     </footer>
+    <script defer src="./script.js"></script>
   </body>
 </html>

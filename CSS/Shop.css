@@ -55,11 +55,8 @@
 }
 .main {
   background-color: rgba(246, 246, 250, 1);
-  height: 1900px;
 }
-.main_shop {
-  height: 600px;
-}
+
 .label_check {
   display: flex;
 }
@@ -71,10 +68,6 @@
   justify-content: space-between;
 }
 
-.main_products {
-  width: 900px;
-  height: 1810px;
-}
 .main_product {
   display: flex;
   justify-content: space-between;
@@ -99,8 +92,15 @@
   margin-bottom: 20px;
 }
 .img_p2 {
-  margin-top: 6px;
+  margin-left: 5px;
   vertical-align: sub;
+}
+
+.img_pay {
+  margin-right: 100px;
+}
+.main_modal {
+  display: flex;
 }
 .real_checkbox {
   width: 0;
@@ -120,7 +120,7 @@
   height: 20px;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 6px;
   vertical-align: sub;
 }
 .custom_checkbox::before {
@@ -141,6 +141,17 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.3);
   margin-top: 20px;
   margin-bottom: -20px;
+}
+.main_lineToggle {
+  display: none;
+}
+.visibility_hidden {
+  visibility: hidden;
+}
+.main_h2_active {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
 }
 .main_product__p1 {
   font-size: 16px;
@@ -175,9 +186,13 @@
   width: 24px;
   height: 20px;
 }
+.counter_images {
+  margin-left: 10px;
+}
 .counter_img2 {
   margin-left: 10px;
 }
+
 .counter_red {
   margin: 8px 0 8px 0;
   font-size: 13px;
@@ -226,6 +241,27 @@
   height: 1356px;
   display: none;
 }
+
 .footer_bot {
   display: none;
+}
+.strelkaBtn {
+  background-color: rgba(246, 246, 250, 1);
+  border: 1px solid rgba(246, 246, 250, 1);
+}
+.strelkaBtnMarg {
+  margin-top: 30px;
+}
+.dislpay_none {
+  display: none;
+}
+.divFooter {
+  height: 20px;
+  background-color: rgba(246, 246, 250, 1);
+}
+.class {
+  fill: rgba(203, 17, 171, 1);
+}
+.class2 {
+  fill: rgba(245, 81, 35, 1);
 }

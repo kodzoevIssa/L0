@@ -50,6 +50,7 @@
   font-weight: 400;
   line-height: 16px;
 }
+
 .result_delivery {
   padding: 8px 8px 12px 8px;
   margin-top: 12px;
@@ -116,4 +117,9 @@
 }
 .custom_checkbox__marg {
   margin: 0;
+}
+
+.btn-karandash {
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 1);
 }

@@ -81,7 +81,7 @@ body {
   color: #ffffff;
 }
 .header_input {
-  background: url(/images/Search.svg) no-repeat center right 2%;
+  background: url(../images/Search.svg) no-repeat center right 2%;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
