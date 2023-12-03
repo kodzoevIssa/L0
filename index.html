@@ -16,8 +16,26 @@
     <header class="header">
       <div class="menu">
         <div class="options">
-          <a href="">Профиль</a>
-          <a href="">Корзина</a>
+          <a href="">Женщинам</a>
+          <a href="">Обувь</a>
+          <a href="">Детям</a>
+          <a href="">Мужчинам</a>
+          <a href="">Дом</a>
+          <a href="">Новый год</a>
+          <a href="">Красота</a>
+          <a href="">Акссесуары</a>
+          <a href="">Электроника</a>
+          <a href="">Игрушки</a>
+          <a href="">Мебель</a>
+          <a href="">Товары для взрослых</a>
+          <a href="">Продукты</a>
+          <a href="">Бытовая техника</a>
+          <a href="">Зоотовары</a>
+          <a href="">Спорт</a>
+          <a href="">Автотовары</a>
+          <a href="">Книги</a>
+          <a href="">Ювелирные изделия</a>
+          <a href="">Для ремонта</a>
         </div>
       </div>
       <div class="container">
@@ -53,6 +71,7 @@
         </div>
       </div>
     </header>
+    <div id="overlay3"></div>
     <div id="page_modal" class="page_modal">
       <div class="page_modal-window">
         <div class="modal_flex">
@@ -125,7 +144,7 @@
             1234 56&bull;&bull; &bull;&bull;&bull;&bull; 1234&nbsp;&nbsp; 01/30
           </p>
         </div>
-        <button class="page_modal-btn">Выбрать</button>
+        <button id="modalBtn_submit1" class="page_modal-btn">Выбрать</button>
       </div>
       <div class="overlay"></div>
     </div>
@@ -154,10 +173,18 @@
               />
               <span class="custom_checkbox2"></span>
             </label>
-            <p class="page_modal-window2__p2">Бишкек, улица Табышалиева, 57</p>
+            <div>
+              <p class="page_modal-window2__p2">
+                Бишкек, улица Табышалиева, 57
+              </p>
+              <div class="mobile_modal-star">
+                <img class="modal_star" src="./images/star.svg" alt="" /> Пункт
+                выдачи
+              </div>
+            </div>
           </div>
           <svg
-            class="cursor"
+            class="cursor cursor_modal2"
             id="svg-jsB7"
             width="16"
             height="16"
@@ -200,12 +227,18 @@
               />
               <span class="custom_checkbox2"></span>
             </label>
-            <p class="page_modal-window2__p2">
-              Бишкек, улица Жукеева-Пудовкина, 77/1
-            </p>
+            <div>
+              <p class="page_modal-window2__p2">
+                Бишкек, улица Жукеева-Пудовкина, 77/1
+              </p>
+              <div class="mobile_modal-star">
+                <img class="modal_star" src="./images/star.svg" alt="" />
+                <b>4.99</b> Пункт выдачи
+              </div>
+            </div>
           </div>
           <svg
-            class="cursor"
+            class="cursor cursor_modal2"
             id="svg-jsB8"
             width="16"
             height="16"
@@ -248,12 +281,19 @@
               />
               <span class="custom_checkbox2"></span>
             </label>
-            <p class="page_modal-window2__p2">
-              Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
-            </p>
+            <div>
+              <p class="page_modal-window2__p2">
+                Бишкек, микрорайон Джал, улица Ахунбаева Исы, 67/1
+              </p>
+              <div class="mobile_modal-star">
+                <img class="modal_star" src="./images/star.svg" alt="" />
+                <b>4.99</b>
+                Пункт выдачи
+              </div>
+            </div>
           </div>
           <svg
-            class="cursor"
+            class="cursor cursor_modal2"
             id="svg-jsB9"
             width="16"
             height="16"
@@ -284,7 +324,9 @@
             />
           </svg>
         </div>
-        <button class="page_modal-btn btn-marg">Выбрать</button>
+        <button id="modalBtn_submit2" class="page_modal-btn btn-marg">
+          Выбрать
+        </button>
       </div>
       <div class="overlay2"></div>
     </div>
@@ -1332,7 +1374,7 @@
                   <label id="name" class="text-field__placeholder">Имя</label>
                   <span class="span"></span>
                   <p id="error_input1" class="error_input1 input_marg">
-                    Пустое поле
+                    Укажите имя
                   </p>
                 </div>
                 <div class="text-field">
@@ -1343,7 +1385,7 @@
                   />
                   <label class="text-field__placeholder">Фамилия</label>
                   <p id="error_input2" class="error_input1 input_marg">
-                    Пустое поле
+                    Укажите фамилию
                   </p>
                 </div>
                 <div class="text-field">
@@ -1353,7 +1395,7 @@
                     required
                   />
                   <label class="text-field__placeholder">Почта</label>
-                  <p id="error_input3" class="error_input2">Пустое поле</p>
+                  <p id="error_input3" class="error_input2">Укажите почту</p>
                 </div>
                 <div class="text-field">
                   <input
@@ -1363,7 +1405,7 @@
                     required
                   />
                   <label class="text-field__placeholder">Телефон</label>
-                  <p id="error_input4" class="error_input2">Пустое поле</p>
+                  <p id="error_input4" class="error_input2">Укажите телефон</p>
                 </div>
                 <div class="text-field">
                   <input
@@ -1373,7 +1415,7 @@
                   />
                   <label class="text-field__placeholder">ИНН</label>
                   <p class="inn_p">Для таможенного оформления</p>
-                  <p id="error_input5" class="error_input2">Пустое поле</p>
+                  <p id="error_input5" class="error_input2">Укажите ИНН</p>
                 </div>
               </div>
             </form>

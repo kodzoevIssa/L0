@@ -2,11 +2,15 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger1").addEventListener("click", function () {
     document.querySelector("header").classList.toggle("open");
+    document.getElementById("overlay3").classList.toggle("overlay3");
+    document.body.classList.toggle("Scroll");
   });
 });
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("burger2").addEventListener("click", function () {
     document.querySelector("header").classList.toggle("open");
+    document.getElementById("overlay3").classList.toggle("overlay3");
+    document.body.classList.toggle("Scroll");
   });
 });
 
@@ -43,6 +47,8 @@ const close2 = document.getElementById("modalCross2");
 const modal2Btn = document.getElementById("modal2Btn");
 const karandash2 = document.getElementById("btnkarandash2");
 const modal2Btn2 = document.getElementById("modal2Btn2");
+const modalSub1 = document.getElementById("modalBtn_submit1");
+const modalSub2 = document.getElementById("modalBtn_submit2");
 
 modal1Btn.onclick = () => {
   modal1.style.visibility = "visible";
@@ -64,6 +70,12 @@ karandash2.onclick = () => {
 };
 modal2Btn2.onclick = () => {
   modal2.style.visibility = "visible";
+};
+modalSub1.onclick = () => {
+  modal1.style.visibility = "hidden";
+};
+modalSub2.onclick = () => {
+  modal2.style.visibility = "hidden";
 };
 
 // инпуты;
@@ -261,6 +273,7 @@ svgBasket9.addEventListener("click", () => {
   iconsbasket9.classList.toggle("class2");
   posticonsbasket9.classList.toggle("class2");
 });
+
 /////////////////////////////////////////////////////////////
 // дополнительно
 const strelka = document.getElementById("strelka");
@@ -275,8 +288,10 @@ const flex = document.querySelector(".main_shop__flex");
 strelka.onclick = () => {
   shop1.classList.toggle("dislpay_none");
   check.classList.toggle("visibility_hidden");
+  strelka.classList.toggle("strelka2");
+  strelka.classList.toggle("strelka1");
   if (textBasket.innerHTML == "") {
-    flex.style.height = "30px";
+    flex.style.height = "50px";
     textBasket.innerHTML = "203 товара &#183; 2 010 063 com";
   } else {
     flex.style.height = "57px";
@@ -285,6 +300,7 @@ strelka.onclick = () => {
 };
 strelka2.onclick = () => {
   shop2.classList.toggle("dislpay_none");
+  strelka2.classList.toggle("strelka");
 };
 
 const resultCheckbox = document.getElementById("result_checkbox");

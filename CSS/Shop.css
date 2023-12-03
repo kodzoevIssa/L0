@@ -1,3 +1,6 @@
+.main {
+  padding-top: 98px;
+}
 .counter {
   display: flex;
   justify-content: space-between;
@@ -170,6 +173,15 @@
 .main_product__left {
   width: 397px;
   display: flex;
+}
+.strelka2 {
+  transform: rotate(180deg);
+}
+.strelka1 {
+  margin-bottom: -20px;
+}
+.strelka {
+  transform: rotate(180deg);
 }
 
 .main_product__right {

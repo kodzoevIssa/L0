@@ -93,6 +93,9 @@
   }
 }
 @media (max-width: 682px) {
+  .page {
+    justify-content: center;
+  }
   .botline {
     top: 204rem;
   }
