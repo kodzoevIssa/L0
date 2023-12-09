@@ -15,8 +15,96 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Счётчик
+let TotalSum = document.getElementById("TotalSum");
+let totalFull = document.getElementById("TotalSumFull");
+let TotalSumSale = document.getElementById("TotalSumSale");
+let shopSum1 = document.getElementById("ShopSum1");
+let shopSum2 = document.getElementById("ShopSum2");
+let shopSum3 = document.getElementById("ShopSum3");
+let shopSumSale1 = document.getElementById("ShopSumSale1");
+let shopSumSale2 = document.getElementById("ShopSumSale2");
+let shopSumSale3 = document.getElementById("ShopSumSale3");
+let shopSumSale1Count = 1051;
+let shopSumSale2Count = 11500;
+let shopSumSale3Count = 950;
+let shopSum1Count = 522;
+let shopSum2Count = 10500;
+let shopSum3Count = 494;
+let countCart = 11516;
+let countCartFull = 13501;
+let countCartSale = 13026;
+
+document.onclick = (event) => {
+  if (event.target.classList.contains("plus")) {
+    if (event.target.dataset.sum == "product1") {
+      countCart += 522;
+      countCartFull += 1051;
+      shopSum1Count += 522;
+      shopSumSale1Count += 1051;
+    }
+    if (event.target.dataset.sum == "product2") {
+      countCart += 10500;
+      countCartFull += 11500;
+      shopSum2Count += 10500;
+      shopSumSale2Count += 11500;
+    }
+    if (event.target.dataset.sum == "product3") {
+      countCart += 247;
+      countCartFull += 475;
+      shopSum3Count += 247;
+      shopSumSale3Count += 475;
+    }
+  }
+  if (event.target.classList.contains("minus")) {
+    if (event.target.dataset.sum == "product1") {
+      countCart -= 522;
+      countCartFull -= 1051;
+      shopSum1Count -= 522;
+      shopSumSale1Count -= 1051;
+    }
+    if (event.target.dataset.sum == "product2") {
+      countCart -= 10500;
+      countCartFull -= 11500;
+      shopSum2Count -= 10500;
+      shopSumSale2Count -= 11500;
+    }
+    if (event.target.dataset.sum == "product3") {
+      countCart -= 247;
+      countCartFull -= 475;
+      shopSum3Count -= 247;
+      shopSumSale3Count -= 475;
+    }
+    if (countCart <= 0) {
+      countCart = 0;
+    }
+    console.log(countCartFull);
+  }
+
+  TotalSum.textContent = `${countCart} com`;
+  TotalSumSale.textContent = `-${
+    shopSumSale1Count + shopSumSale2Count + shopSumSale3Count - countCart
+  } com`;
+  totalFull.textContent = `${countCartFull} com`;
+  shopSum1.textContent = `${shopSum1Count} com`;
+  shopSum2.textContent = `${shopSum2Count} com`;
+  shopSum3.textContent = `${shopSum3Count} com`;
+  shopSumSale1.textContent = `${shopSumSale1Count} com`;
+  shopSumSale2.textContent = `${shopSumSale2Count} com`;
+  shopSumSale3.textContent = `${shopSumSale3Count} com`;
+
+  console.log(countCart);
+};
+
 const counter = function () {
   const btns = document.querySelectorAll(".counter__btn");
+  const bntDisabled1 = document.querySelector(".dis1");
+  const bntDisabled2 = document.querySelector(".dis2");
+  const bntDisabled3 = document.querySelector(".dis3");
+  const inpDisabled1 = document.querySelector(".inpdis1");
+  const inpDisabled2 = document.querySelector(".inpdis2");
+  const inpDisabled3 = document.querySelector(".inpdis3");
+  const btndis1Plus = document.querySelector(".dis1Plus");
+  const btndis3Plus = document.querySelector(".dis3Plus");
 
   btns.forEach((btn) => {
     btn.addEventListener("click", function () {
@@ -24,7 +112,6 @@ const counter = function () {
       const inp = this.parentElement.querySelector(".counter__value");
       const currentValue = +inp.value;
       let newValue;
-
       if (direction === "plus") {
         newValue = currentValue + 1;
       } else {
@@ -32,11 +119,56 @@ const counter = function () {
       }
 
       inp.value = newValue;
+      console.log(inp.value);
+
+      if (inpDisabled1.value == 0) {
+        bntDisabled1.disabled = true;
+      } else if (inpDisabled1.value == 2) {
+        btndis1Plus.disabled = true;
+      } else {
+        bntDisabled1.disabled = false;
+        btndis1Plus.disabled = false;
+      }
+      if (inpDisabled2.value == 0) {
+        bntDisabled2.disabled = true;
+      } else {
+        bntDisabled2.disabled = false;
+      }
+      if (inpDisabled3.value == 0) {
+        bntDisabled3.disabled = true;
+      } else if (inpDisabled3.value == 4) {
+        btndis3Plus.disabled = true;
+      } else {
+        bntDisabled3.disabled = false;
+        btndis3Plus.disabled = false;
+      }
     });
   });
 };
 
 counter();
+
+const resultCheckbox = document.getElementById("result_checkbox");
+const pDelete = document.getElementById("p-delete");
+const changeSize = document.getElementById("changeSize");
+const changeSize2 = document.getElementById("changeSize2");
+
+resultCheckbox.addEventListener("change", function () {
+  if (resultCheckbox.checked) {
+    pDelete.style.display = "none";
+    changeSize.style.fontSize = "18px";
+    btnSubmit.innerText = `Оплатить ${countCart} com`;
+  } else {
+    pDelete.style.display = "block";
+    changeSize.style.fontSize = "13px";
+    btnSubmit.innerText = "Заказать ";
+  }
+});
+btnSubmit.onclick = () => {
+  if (resultCheckbox.checked) {
+    location.reload();
+  }
+};
 // модальные окна
 const modal1 = document.getElementById("page_modal");
 const modal1Btn = document.getElementById("modal1Btn");
@@ -303,22 +435,6 @@ strelka2.onclick = () => {
   strelka2.classList.toggle("strelka");
 };
 
-const resultCheckbox = document.getElementById("result_checkbox");
-const pDelete = document.getElementById("p-delete");
-const changeSize = document.getElementById("changeSize");
-const changeSize2 = document.getElementById("changeSize2");
-
-resultCheckbox.addEventListener("change", function () {
-  if (resultCheckbox.checked) {
-    pDelete.style.display = "none";
-    changeSize.style.fontSize = "18px";
-    btnSubmit.innerText = "Оплатить 2 010 063 com";
-  } else {
-    pDelete.style.display = "block";
-    changeSize.style.fontSize = "13px";
-    btnSubmit.innerText = "Заказать ";
-  }
-});
 /////////
 
 function selectAll(source) {
@@ -340,7 +456,7 @@ function selectAll2(source) {
 }
 
 function updateCheckboxes(checkbox) {
-  var checkboxes = document.getElementsByName(checkbox.name);
+  let checkboxes = document.getElementsByName(checkbox.name);
 
   for (let i = 0; i < checkboxes.length; i++) {
     if (checkboxes[i] !== checkbox) {

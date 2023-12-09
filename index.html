@@ -400,8 +400,10 @@
                       <div>
                         <div class="counter">
                           <button
+                            data-target="dis1"
+                            data-sum="product1"
                             id="decrement_btn"
-                            class="counter__btn"
+                            class="counter__btn minus dis1"
                             data-direction="minus"
                           >
                             -
@@ -411,11 +413,12 @@
                             id="counter_value"
                             type="text"
                             value="1"
-                            class="counter__value"
+                            class="counter__value inpdis1"
                           />
                           <button
+                            data-sum="product1"
                             id="increment_btn"
-                            class="counter__btn"
+                            class="counter__btn plus dis1Plus"
                             data-direction="plus"
                           >
                             +
@@ -475,9 +478,9 @@
                         </div>
                       </div>
                       <div>
-                        <p class="right_sum">522 com</p>
+                        <p class="right_sum" id="ShopSum1">522 com</p>
                         <del class="right_sale modal_link"
-                          >1051 com
+                          ><p id="ShopSumSale1">1051 com</p>
                           <span>
                             <img
                               class="modal_img img_pay"
@@ -533,8 +536,10 @@
                       <div>
                         <div class="counter">
                           <button
+                            data-target="dis2"
+                            data-sum="product2"
                             id="decrement_btn"
-                            class="counter__btn"
+                            class="counter__btn minus dis2"
                             data-direction="minus"
                           >
                             -
@@ -543,13 +548,15 @@
                             disabled
                             id="counter_value"
                             type="text"
-                            value="200"
-                            class="counter__value"
+                            value="1"
+                            class="counter__value inpdis2"
                           />
                           <button
+                            data-sum="product2"
                             id="increment_btn"
-                            class="counter__btn"
+                            class="counter__btn plus"
                             data-direction="plus"
+                            enabled
                           >
                             +
                           </button>
@@ -607,9 +614,9 @@
                         </div>
                       </div>
                       <div>
-                        <p class="right_sum">2 100 047 com</p>
-                        <del class="right_sale modal_link"
-                          >2 300 047 com
+                        <p class="right_sum" id="ShopSum2">10500 com</p>
+                        <del class="right_sale modal_link">
+                          <p id="ShopSumSale2">11500 com</p>
                           <span>
                             <img
                               class="modal_img img_pay"
@@ -664,8 +671,10 @@
                       <div>
                         <div class="counter">
                           <button
+                            data-target="dis3"
+                            data-sum="product3"
                             id="decrement_btn"
-                            class="counter__btn"
+                            class="counter__btn minus dis3"
                             data-direction="minus"
                           >
                             -
@@ -675,17 +684,18 @@
                             id="counter_value"
                             type="text"
                             value="2"
-                            class="counter__value"
+                            class="counter__value inpdis3"
                           />
                           <button
+                            data-sum="product3"
                             id="increment_btn"
-                            class="counter__btn"
+                            class="counter__btn plus dis3Plus"
                             data-direction="plus"
                           >
                             +
                           </button>
                         </div>
-                        <p class="counter_red">осталось 2 шт.</p>
+                        <p class="counter_red">осталось 4 шт.</p>
                         <div class="counter_images">
                           <svg
                             class="cursor svg-js3"
@@ -738,9 +748,9 @@
                         </div>
                       </div>
                       <div>
-                        <p class="right_sum">494 com</p>
+                        <p class="right_sum" id="ShopSum3">494 com</p>
                         <del class="right_sale modal_link"
-                          >950 com
+                          ><p id="ShopSumSale3">950 com</p>
                           <span>
                             <img
                               class="modal_img img_pay"
@@ -1508,15 +1518,15 @@
           <div class="result">
             <div class="result_info">
               <p class="result_block1">Итого</p>
-              <p class="result_block1">2 010 063 com</p>
+              <p class="result_block1" id="TotalSum">11516 com</p>
             </div>
             <div class="result_info">
               <p class="result_block2">203 товара</p>
-              <p class="result_block2">2 302 048 com</p>
+              <p class="result_block2" id="TotalSumFull">13501 com</p>
             </div>
             <div class="result_info">
               <p class="result_block2">Скидка</p>
-              <p class="result_block2">-200 985 com</p>
+              <p class="result_block2" id="TotalSumSale">-1985 com</p>
             </div>
             <div class="result_info">
               <p class="result_block2">Доставка</p>
